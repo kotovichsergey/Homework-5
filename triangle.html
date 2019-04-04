@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">   
+		<title>JS-5</title>
+	</head>
+	<body>
+		<script>
+			let arr = [];
+			for(let i=0;i<3;i++){
+				let tmp = prompt("Введите " +(i+1)+" сторону:","");
+				 if (tmp != null && tmp.trim() != '' && !isNaN(Number(tmp))) {arr[i] = +tmp;} 
+				 else {alert("Введено не число!");break;}
+			}
+			function triangle(arr){
+				let a = arr[0], b = arr[1], c = arr[2], max = 0, min = 0, sr = 0, result = "", param = "";
+				if ((a+b <= c) || (a+c <= b) || (b+c <= a)) {
+					result = "Такого треугольника не существует!";
+				} else {
+					max = Math.max(a, b, c);
+					min = Math.min(a, b, c);					
+					sr = a + b + c - max - min;
+					if (Math.pow(min, 2) + Math.pow(sr, 2) == Math.pow(max, 2)) {param = 'прямоугольный';}
+					if (Math.pow(min, 2) + Math.pow(sr, 2) < Math.pow(max, 2)) {param = 'тупоугольный';}
+					if (Math.pow(min, 2) + Math.pow(sr, 2) > Math.pow(max, 2)) {param = 'остроугольный';}
+					result = `Ваш треугольник ${param}!`
+				}
+				alert(result);
+			}
+			if (arr.length == 3) {triangle(arr);}    
+		</script> 
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">   
+		<title>JS-1</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="calc">
+			<form class="calc_form">
+				<div>
+					<input class="calc_display" id="display" type="text" value="0" disabled>
+				</div>
+				<div class="calc_operations">
+					<button type="button" value="+" class="calc_key operation">+</button>
+					<button type="button" value="-" class="calc_key operation">-</button>
+					<button type="button" value="*" class="calc_key operation">*</button>
+					<button type="button" value="/" class="calc_key operation">/</button>
+				</div>				
+				<div class="calc_field">
+					<div class="calc_field_key">
+							<button type="button" value="7" class="calc_key number">7</button>
+							<button type="button" value="8" class="calc_key number">8</button>
+							<button type="button" value="9" class="calc_key number">9</button>
+							<button type="button" value="4" class="calc_key number">4</button>
+							<button type="button" value="5" class="calc_key number">5</button>
+							<button type="button" value="6" class="calc_key number">6</button>
+							<button type="button" value="1" class="calc_key number">1</button>
+							<button type="button" value="2" class="calc_key number">2</button>
+							<button type="button" value="3" class="calc_key number">3</button>
+							<button type="button" value="0" class="calc_key number">0</button>
+							<button type="button" value="." class="calc_key" id="decimal">.</button>
+							<button type="button" value="c" class="calc_key" id="clear">c</button>
+					</div>
+					<div class="calc_result_key">
+							<button type="button" value="=" class="calc_key calc_key-equal operation">=</button>
+					</div>
+				</div>
+				<div class="lastResult">Последний результат: 
+					<p id="result"></p>
+				</div>
+			</form>
+		</div>
+		<script src="js/calc.js"></script>	
+	</body>
+</html>
